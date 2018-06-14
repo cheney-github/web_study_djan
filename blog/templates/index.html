@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django数据传输测试</title>
+    <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet">
+      <style>
+      body{
+      font-size:30px;
+      }
+
+      h2{
+      font-size:30px;
+      text-align:center;
+      }
+
+      .imgpic{
+      width:150p;
+      margin:0 auto;
+      }
+      </style>
+  </head>
+
+  <body>
+  {%include 'head.html' %}
+  {% for s in data%}
+    <div class="ui segment" style="">
+        <h2>传入数据源：{{ data }}</h2>
+    </div>
+  
+  <div class="ui segment">
+      <img class="ui large centered image" src="{{s.pic}}">
+  </div>
+
+
+<div class="ui horizontal divider">
+    <h2>数据列表：</h2>
+  </div>
+  {% endfor %}
+
+  {% for s2 in data2%}
+  <div class="" style="text-align:center">
+      <a  href="{{s2.zhengwen}}">{{s2.biaoti}}</a>
+  </div>
+
+  {% endfor %}
+
+  {% extend foot.html%}
+  </body>
+</html>
